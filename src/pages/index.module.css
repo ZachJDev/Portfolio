@@ -1,0 +1,15 @@
+
+
+.canvas {
+    background-color: aqua;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+main {
+    background-color: aquamarine;
+    position: relative;
+}
+

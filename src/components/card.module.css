@@ -1,0 +1,22 @@
+.info {
+    background-color: blueviolet;
+    width: 25%;
+    margin-bottom: 10px;
+}
+.info p {
+    color: aliceblue;
+}
+
+.image{
+    height: 10%;
+    
+}
+
+@media only screen and (max-width: 860px){
+    .info {
+        background-color: rgb(0, 0, 0);
+        height: 300px;
+        width: auto;
+        margin: 15px 10px;
+    }
+}
