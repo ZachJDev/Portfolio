@@ -32,12 +32,10 @@ const Layout = ({ children }) => {
           maxWidth: 1200,
           padding: `0 1.0875rem 1.45rem`,
           position: "relative",
-          top: 600,
           
         }}
       >
         <main>{children}</main>
-        <side></side>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

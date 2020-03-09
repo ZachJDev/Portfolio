@@ -14,21 +14,21 @@ const IndexPage = ({data}) =>
   <>
   <canvas className={style.canvas}></canvas>
   <Layout>
-  <div className={style.main}>
+  <div className={style.main} >
     <SEO title="Home" />
     <div className="box">
     <h1>Hi people</h1>
     <Collection sectionTitle="Work">
     {data.works.edges.map(({node}) => (
-      <Card className={style.testDiv} data={node.frontmatter}></Card>
+      <Card className={style.testDiv} data={node}></Card>
     ))}
-      <Link to="/work/"><span class="hide">See</span><span>More</span><span>Work...</span></Link>
+      <Link className={style.showMore} to="/work/"><span class="hide">See</span><span>More</span><span>Work...</span></Link>
     </Collection>
     <Collection sectionTitle="Blog">
     {data.blogs.edges.map(({node}) => (
-      <Card className={style.testDiv} data={node.frontmatter}></Card>
+      <Card className={style.testDiv} data={node}></Card>
     ))}
-      <Link to="/blog/"><span>See</span><span>More</span><span>Posts...</span></Link>
+      <Link className={style.showMore}  to="/blog/"><span>See</span><span>More</span><span>Posts...</span></Link>
     </Collection>
     </div>
     <div></div>
@@ -48,29 +48,46 @@ query query {
        node {
          id
          frontmatter {
-           thumbnail
            title
            type
+           thumbnail {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+           }
          }
          excerpt
+         fields {
+           slug
+         }
        }
      }
    }
    blogs: allMarkdownRemark(limit: 3, filter:{frontmatter:{type: {eq: "blog"}}}) {
-     totalCount
-     edges {
-       node {
-         id
-         frontmatter {
-           title
-           date(formatString: "DD MMMM, YYYY")
-           type
-           thumbnail
-         }
-         excerpt
-       }
-     }
-   }
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          type
+          thumbnail {
+           childImageSharp {
+             fluid {
+               ...GatsbyImageSharpFluid
+             }
+           }
+          }
+        }
+        excerpt
+        fields {
+          slug
+        }
+      }
+    }
+  }
  }
  
 `

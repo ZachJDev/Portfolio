@@ -1,20 +1,31 @@
 .info {
-    background-color: blueviolet;
+    height: 25rem;
     width: 25%;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    border-bottom: 1px solid black;
 }
 .info p {
     color: aliceblue;
 }
 
 .image{
-    height: 10%;
-    
+    height: 50%;
+}
+
+.link{
+    width: 100%;
+    color: black;
+    text-decoration: none;
+
+}
+.link h4 {
+    color: black;
+    font-size: 1.2rem;
+    padding-left: .4rem;
 }
 
 @media only screen and (max-width: 860px){
     .info {
-        background-color: rgb(0, 0, 0);
         height: 300px;
         width: auto;
         margin: 15px 10px;
