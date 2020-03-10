@@ -17,7 +17,7 @@ Looking back, I made a lot of mistakes.
 
 Here are four of them.
 
-###1. I relied on barely-descriptive variable and function names.
+###1. I relied on barely descriptive variable and function names.
 
 This first mistake stepped on my toes constantly. Oh, I want to iterate over the array of skills I just entered? Would that be `arr`, `skills_arr`, or `newSKills_arr`? My functions were worse, with names like `arrayCheck` -- a datatype and a terrible, no-good, non-descriptive verb.
 
@@ -41,7 +41,7 @@ Remember above, when I said:
 
 >...and thankfully I am the only person who will ever read the code.
 
-That was a bit misleading because I will never read this code again. And if I do, I wouldn't know where to start. The only comment I made was to attribute a quicksort algorithm I got from StackOverflow. The code is unclear enough, and the lack of comments makes it nearly impossible to figure out.
+That was a bit misleading because I will try my best to never read this code again. And if I do, I wouldn't know where to start. The only comment I made was to attribute a quicksort algorithm I got from StackOverflow. The code is unclear enough, and the lack of comments makes it nearly impossible to figure out.
 
 🤕 🤕 🤕 · ·
 
