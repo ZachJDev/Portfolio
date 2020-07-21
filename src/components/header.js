@@ -8,17 +8,18 @@ const Header = ({ siteTitle }) => (
   <header className={style.header}>
     <div>
       <h1 style={{ margin: 0 }}>
-        <Link className={style.siteTitle}>
+        <Link to="/" className={style.siteTitle}>
           {siteTitle}
         </Link>
       </h1>
     </div>
     <div className={style.links}>
     <ul>
-      <li>about me & resume</li>
-      <li>work</li>
-      <li>blog</li>
-      <li>github</li>
+      <li><Link to="/about">about me & resume</Link></li>
+      <li><Link to="/work/">work</Link></li>
+      <li><Link to="/blog/">blog</Link></li>
+      <li><a href="https://github.com/ZachJDev">github</a></li>
+
     </ul>
     </div>
   </header>

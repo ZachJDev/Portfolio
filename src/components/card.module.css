@@ -1,33 +1,84 @@
 .info {
-    height: 25rem;
+    height: 29rem;
     width: 25%;
-    /* margin-bottom: 10px; */
-    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+
+    padding: 10px;
+    background-color: rgb(233, 233, 233);
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+    /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.425); */
 }
-.info p {
-    color: aliceblue;
+* {
+    box-shadow: none;
+    text-decoration: none;
+}
+.info .excerpt {
+    line-height: 1.6rem;
+    color: black;
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+    
+}
+.info .date {
+    font-size: .8rem;
+
+}
+
+.imageWrap {
+    max-width: 100%;
+    max-height: 35%;
+    min-height: 35%;
+    padding: 30px;  
 }
 
 .image{
-    height: 50%;
+    height: 200px;
+    /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.123) ;  */
+/* box shadow from MDN */
+}
+.image:hover {
+    
 }
 
 .link{
     width: 100%;
     color: black;
     text-decoration: none;
+    display: inline-block;
 
 }
-.link h4 {
+
+
+
+.info-body {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.link .title{
+    margin-top: 40px;
     color: black;
     font-size: 1.2rem;
-    padding-left: .4rem;
+    text-decoration: none;
 }
+
+.link .title:hover {
+    color: rgb(94, 94, 94);
+}
+
 
 @media only screen and (max-width: 860px){
     .info {
-        height: 300px;
-        width: auto;
-        margin: 15px 10px;
+        height: 500px;
+        width: 65%;
+        margin: 15px auto;
+    }
+    .image {
+        max-height: 200px;
     }
 }

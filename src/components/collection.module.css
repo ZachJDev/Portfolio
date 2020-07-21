@@ -8,10 +8,13 @@ body {
     display: flex;
     justify-content: space-evenly;
     position: relative;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .chunk h2 {
     margin-top: 0;
+
 }
 
 

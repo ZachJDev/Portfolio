@@ -1,11 +1,11 @@
 ---
 title: A Tale of Two UX Decisions
-date: "2004-01-23"
+date: "2020-02-10"
 type: blog
-thumbnail: "images/UX-noBackground.png"
+thumbnail: "UX-noBackground.png"
 ---
 
-For my [flagship project](/Competency%20Tracker/ "Competency Tracker"), I decided to rewrite the Competency Tracker Excel application as a Node web app. With all the [lessons learned](/Headaches/ "First App Headaches"), I certainly had a headstart, and despite the higher learning curve, Node, Express, and Mongo ended up being much easier to wrangle than VBA.
+For my [flagship project](/Competency%20Tracker/ "Competency Tracker"), I decided to rewrite the Competency Tracker Excel application as a Node web app. With all the [lessons learned](/Headaches/ "First App Headaches"), I certainly had a headstart, and despite the steeper learning curve, Node, Express, and Mongo ended up being much easier to wrangle than VBA.
 
 But the change in technology did not imply a change in interaction design. I had to start from the beginning, questioning how I wanted the user to use my program at every step: what kind of behavior did I want to encourage? What did I want to discourage? What information might the user want at any given time? How far away is it on the site? 
 

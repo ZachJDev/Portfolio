@@ -3,15 +3,17 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Image from "gatsby-image"
 
+import Style from "./blog-post.module.css"
+
 export default ({ data }) => {
   const post = data.markdownRemark
   const image = post.frontmatter.thumbnail.childImageSharp.fluid
   return (
     <Layout>
-      <div>
-      <Image fluid={image}></Image>
+      <div className={Style.content}>
+      <Image className={Style.image} fluid={image}></Image>
         <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className={Style.markdown} dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
   )

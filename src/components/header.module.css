@@ -1,5 +1,6 @@
 
 .header {
+    background-color:rgba(255,255,255, .9);
 padding: 2rem;
 display: flex;
 justify-content: space-around;
@@ -14,8 +15,13 @@ z-index: 10;
     list-style: none;
 }
 
-.links ul li {
+.links ul li  a{
     margin:  auto 1rem;
+    color: black;
+}
+
+.links ul li:hover a{
+    text-decoration: underline;
 }
 
 .siteTitle {

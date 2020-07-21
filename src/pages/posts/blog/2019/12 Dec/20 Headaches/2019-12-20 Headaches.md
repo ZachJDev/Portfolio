@@ -1,8 +1,8 @@
 ---
 title: First-App Headaches
-date: "2005-01-23"
+date: "2019-12-20"
 type: blog
-thumbnail: "images/Headaches.png"
+thumbnail: "Headaches.png"
 ---
 
 I have learned a lot in my three months of earnest web-development study, so I figured now is the perfect time to reflect on the project that kickstarted my journey, and all of the lousy code that held it together.  
@@ -13,11 +13,11 @@ Now, I did not consider myself a programmer when I started the project. My mater
 
 A week after starting, I turned in a hot mess of 1000 lines of VBA code and eight userforms built on top of two Excel worksheets.
 
-Looking back, I made a lot of mistakes. 
+Looking back, I made a lot of mistakes.
 
 Here are four of them.
 
-###1. I relied on barely descriptive variable and function names.
+### 1. I relied on barely descriptive variable and function names
 
 This first mistake stepped on my toes constantly. Oh, I want to iterate over the array of skills I just entered? Would that be `arr`, `skills_arr`, or `newSKills_arr`? My functions were worse, with names like `arrayCheck` -- a datatype and a terrible, no-good, non-descriptive verb.
 
@@ -27,17 +27,17 @@ I give this three headaches out of five.
 
  🤕 🤕 🤕 · ·
 
-###2. I repeated myself and my code  many times.
+### 2. I repeated myself and my code  many times
 
 Why waste all that time writing a function whose name I won't remember when I can just copy-and-paste the code I need down here?
 
-Again, a big, annoying mistake that was only mitigated by my scale. 
+Again, a big, annoying mistake that was only mitigated by my scale.
 
  🤕 🤕 🤕 🤕 ·
 
-###3. No comments, no documentation.
+### 3. No comments, no documentation
 
-Remember above, when I said: 
+Remember above, when I said:
 
 >...and thankfully I am the only person who will ever read the code.
 
@@ -51,7 +51,7 @@ This one was due to deficient knowledge of VBA and, unlike the other mistakes on
 
 The only way I was able to regularly and successfully pass data between my forms was to stick a variable in the global scope for all to see. There's probably a way around this, but I was having trouble getting other solutions to work.
 
-####Now, I hope it's clear what kind of mess I got myself into:
+#### Now, I hope it's clear what kind of mess I got myself into:
 >1. I move a lot of code to the global scope to make it accessible by different forms.
 >2. My terrible naming conventions meant that a lot of variables, previously tucked away, were now colliding, and I was calling different things by the same name.
 >3. The lack of comments (and generally poor style) meant that figuring out where these variables were called and what I was doing to them was more work than it should have been.

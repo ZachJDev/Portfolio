@@ -1,40 +1,40 @@
 import React from "react"
 import { Link } from "gatsby"
-import style from "./index.module.css"
+import Style from "./index.module.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faChevronRight} from '@fortawesome/free-solid-svg-icons'
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import MySketch from "../components/Sketch"
 import Collection from "../components/collection"
 import Card from "../components/card"
+import "typeface-source-sans-pro"
 
 const IndexPage = ({data}) =>
- { console.log(data)
+ { 
    return (
   <>
-  <canvas className={style.canvas}></canvas>
+ <MySketch className={Style.canvas} />
   <Layout>
-  <div className={style.main} >
+  <div className={Style.main} >
     <SEO title="Home" />
-    <div className="box">
-    <h1>Hi people</h1>
-    <Collection sectionTitle="Work">
+    <h1 className={Style.about}>I am a Fullstack Web Developer focusing on Node and Javascript</h1>
+    <div className={Style.box}>
+    <Collection sectionTitle="Things I've Made:" to="/work">
     {data.works.edges.map(({node}) => (
-      <Card className={style.testDiv} data={node}></Card>
+      <Card className={Style.testDiv} data={node}></Card>
     ))}
-      <Link className={style.showMore} to="/work/"><span class="hide">See</span><span>More</span><span>Work...</span></Link>
+      <Link className={Style.showMore} to="/work/"><span className={Style.seeMore}><p>see more</p> <FontAwesomeIcon icon={faChevronRight} className={Style.icon}/></span> </Link>
     </Collection>
-    <Collection sectionTitle="Blog">
+    <Collection sectionTitle="Things I've Written:">
     {data.blogs.edges.map(({node}) => (
-      <Card className={style.testDiv} data={node}></Card>
+      <Card className={Style.testDiv} data={node}></Card>
     ))}
-      <Link className={style.showMore}  to="/blog/"><span>See</span><span>More</span><span>Posts...</span></Link>
+      <Link className={Style.showMore}  to="/blog/"> <span className={Style.seeMore}><p>see more</p> <FontAwesomeIcon icon={faChevronRight} className={Style.icon}/></span></Link>
     </Collection>
     </div>
-    <div></div>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/my-files/">Go to page 2</Link>
     </div>
   </Layout>
   </>
@@ -42,7 +42,7 @@ const IndexPage = ({data}) =>
 
 export const query = graphql`
 query query {
-  works: allMarkdownRemark(limit: 3, filter:{frontmatter:{type: {eq: "work"}}}) {
+  works: allMarkdownRemark(limit: 3, filter:{frontmatter:{type: {eq: "work"}}}, sort: {fields: frontmatter___date, order: DESC}) {
      totalCount
      edges {
        node {
@@ -50,6 +50,10 @@ query query {
          frontmatter {
            title
            type
+           date
+           gitHubLink
+           link
+           description
            thumbnail {
             childImageSharp {
               fluid {
@@ -65,7 +69,7 @@ query query {
        }
      }
    }
-   blogs: allMarkdownRemark(limit: 3, filter:{frontmatter:{type: {eq: "blog"}}}) {
+   blogs: allMarkdownRemark(limit: 3, filter:{frontmatter:{type: {eq: "blog"}}}, sort: {fields: frontmatter___date, order: DESC}) {
     totalCount
     edges {
       node {
@@ -73,6 +77,7 @@ query query {
         frontmatter {
           title
           type
+          date
           thumbnail {
            childImageSharp {
              fluid {
