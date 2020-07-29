@@ -2,9 +2,9 @@ import React from "react"
 import p5 from "p5"
 import Style from "./Sketch.module.css"
 
-const MAXDISTANCE = 175
+const MAXDISTANCE = 250
 const MAXHYPOT = Math.sqrt(MAXDISTANCE ** 2 + MAXDISTANCE ** 2)
-let NUMPOINTS = 125
+let NUMPOINTS = 95
 const MAXSPEED = 0.4
 const STROKEWEIGHT = 0
 const MAX_REPEL_DIST = 150
@@ -28,7 +28,7 @@ class MySketch extends React.Component {
       if (typeof window !== `undefined`) {
         H = window.document.body.clientHeight
         W = window.document.body.clientWidth
-        if(W < 800) NUMPOINTS = 50
+        if(W < 900) NUMPOINTS = 50
       }
       p.createCanvas(W, H)
       p.background(255)
@@ -106,7 +106,7 @@ class Point {
         Math.abs(point.pos.x - this.pos.x) < MAXDISTANCE &&
         Math.abs(point.pos.y - this.pos.y) < MAXDISTANCE &&
         // Make sure this point is not in the line Map already
-        !map.get(point).includes(this)                   &&
+        !map.get(point).includes(this) &&
         point !== this
       ) {
           map.get(this).push(point)
@@ -122,7 +122,7 @@ class Point {
   } 
   lineTo(vec) {
     let distance = Math.floor(Math.abs(this.pos.distance(vec)))
-    let alpha = 255 - 255 * (distance / MAXHYPOT)
+    let alpha = (255 - 255 * (distance / MAXHYPOT) - 120)
     this.p.stroke(50, 10, 68, alpha)
     this.p.strokeWeight(2)
     this.p.line(this.pos.x, this.pos.y, vec.x,vec.y) 
