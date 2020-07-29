@@ -1,10 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import {Helmet } from "react-helmet"
 import Style from "./index.module.css"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 
 import Collection from "../components/collection"
 import Card from "../components/card"
@@ -15,7 +13,7 @@ const Work = ({data}) =>
         <>
                 <Helmet>
         <meta charSet="utf-8" />
-          <title>Work</title>
+          <title>Work | Zach Johnson, Developer</title>
         </Helmet>
         <Layout>
         <Collection sectionTitle="Work">

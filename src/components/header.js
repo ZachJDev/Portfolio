@@ -4,6 +4,10 @@ import React from "react"
 import style from "./header.module.css"
 import "typeface-cooper-hewitt"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+
 const Header = ({ siteTitle }) => (
   <header className={style.header}>
     <div>
@@ -15,10 +19,11 @@ const Header = ({ siteTitle }) => (
     </div>
     <div className={style.links}>
     <ul>
-      <li><Link to="/about">about me & resume</Link></li>
-      <li><Link to="/work/">work</Link></li>
-      <li><Link to="/blog/">blog</Link></li>
-      <li><a href="https://github.com/ZachJDev">github</a></li>
+      <li><Link to="/about">About Me & Resume</Link></li>
+      <li><Link to="/work/">Work</Link></li>
+      <li><Link to="/blog/">Blog</Link></li>
+      <li><a href="https://github.com/ZachJDev"><FontAwesomeIcon icon={faGithub} className={style.icon}/></a></li>
+      <li><a href="mailto:ZachJDev2121@gmail.com"> <FontAwesomeIcon icon={faEnvelope} className={style.icon}/></a></li>
 
     </ul>
     </div>

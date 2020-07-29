@@ -25,7 +25,7 @@ export default ({ data }) => {
        </Link>
       </div>
       <p className={Style.excerpt}>{excerptText}</p>
-      {frontmatter.type == "work"  && (<WorkLinks className={Style.workLinks} frontmatter={frontmatter}/>)}
+      {frontmatter.type === "work"  && (<WorkLinks className={Style.workLinks} frontmatter={frontmatter}/>)}
       </div>
     </div >
   )

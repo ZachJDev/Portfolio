@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronRight} from '@fortawesome/free-solid-svg-icons'
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import MySketch from "../components/Sketch"
 import Collection from "../components/collection"
@@ -14,13 +13,14 @@ import "typeface-source-sans-pro"
 
 const IndexPage = ({data}) =>
  { 
+  const lead = data.aboutMe.siteMetadata.aboutMe
    return (
   <>
  <MySketch className={Style.canvas} />
   <Layout>
   <div className={Style.main} >
     <SEO title="Home" />
-    <h1 className={Style.about}>I am a Fullstack Web Developer focusing on Node and Javascript</h1>
+    <h2 className={Style.about}>{lead}</h2>
     <div className={Style.box}>
     <Collection sectionTitle="Things I've Made:" to="/work">
     {data.works.edges.map(({node}) => (
@@ -93,6 +93,11 @@ query query {
       }
     }
   }
+  aboutMe: site {
+        siteMetadata {
+          aboutMe
+        }
+      }
  }
  
 `

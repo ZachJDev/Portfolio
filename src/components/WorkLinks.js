@@ -1,5 +1,4 @@
 import React from "react"
-import {Link} from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import Style from "./WorkLinks.module.css"

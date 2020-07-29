@@ -1,5 +1,4 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
 import style from "./collection.module.css"
 
 

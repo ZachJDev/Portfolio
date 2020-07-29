@@ -3,6 +3,7 @@ module.exports = {
     title: `Zach Johnson, Developer`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    aboutMe: `I am a web developer with a passion for research and problem solving.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -46,6 +47,5 @@ module.exports = {
         path: `${__dirname}/src/pages/posts/images`,
       },
     },
-
   ],
 }

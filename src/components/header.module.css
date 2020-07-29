@@ -11,7 +11,7 @@ z-index: 10;
 .links ul {
     color: black;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style: none;
 }
 
@@ -27,4 +27,33 @@ z-index: 10;
 .siteTitle {
     color: black;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 860px){
+    .header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        padding: 1rem 0; 
+    }
+
+    .siteTitle {
+        width: auto;
+       margin: auto;
+    }
+    .links ul {
+        width: 100%;
+        margin: auto;
+        padding-top: 1rem;
+        display: flex;
+    }
+    .links ul li  a{
+        margin: .5rem;
+
+    }
+    .links ul {
+        padding-left: 0;
+    }
+    
 }

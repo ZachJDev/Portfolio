@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Style from "./index.module.css"
 
 import Layout from "../components/layout"
@@ -13,7 +12,7 @@ const Blog = ({data}) =>
         <>
         <Helmet>
         <meta charSet="utf-8" />
-          <title>Blog</title>
+          <title>Blog | Zach Johnson, Developer</title>
         </Helmet>
         <Layout title="Blog">
         <Collection sectionTitle="Blog Posts:">
