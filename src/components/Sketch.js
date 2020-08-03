@@ -2,7 +2,7 @@ import React from "react"
 import p5 from "p5"
 import Style from "./Sketch.module.css"
 
-const MAXDISTANCE = 250
+const MAXDISTANCE = 170
 const MAXHYPOT = Math.sqrt(MAXDISTANCE ** 2 + MAXDISTANCE ** 2)
 let NUMPOINTS = 95
 const MAXSPEED = 0.4
@@ -11,6 +11,8 @@ const MAX_REPEL_DIST = 150
 
 let H; let W;
 let time
+
+ const clampAlpha = clampBetween(20,255);
 
 class MySketch extends React.Component {
   constructor(props) {
@@ -122,7 +124,7 @@ class Point {
   } 
   lineTo(vec) {
     let distance = Math.floor(Math.abs(this.pos.distance(vec)))
-    let alpha = (255 - 255 * (distance / MAXHYPOT) - 120)
+    let alpha = clampAlpha(255 - 255 * (distance / MAXHYPOT) - 120)
     this.p.stroke(50, 10, 68, alpha)
     this.p.strokeWeight(2)
     this.p.line(this.pos.x, this.pos.y, vec.x,vec.y) 
@@ -179,3 +181,10 @@ Thank you
 http://www.zjexpress.net/GettingP5ToWorkInGatsby/
 For instructions for making this work!
 */
+function clampBetween(low, high) {
+  return function(num) {
+    if(high < num) return high;
+    if(low > num) return low;
+    return num
+  }
+}
