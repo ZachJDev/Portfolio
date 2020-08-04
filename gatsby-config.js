@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Zach Johnson, Developer`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `Zach Johnson`,
     aboutMe: `I am a web developer with a passion for research and problem solving.`,
   },
   plugins: [
@@ -19,7 +19,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // icon: `./src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `./src/images/favicon-96x96.png`, // This path is relative to the root of the site.
       },
     },
     {

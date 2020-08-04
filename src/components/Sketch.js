@@ -4,13 +4,12 @@ import Style from "./Sketch.module.css"
 
 const MAXDISTANCE = 170
 const MAXHYPOT = Math.sqrt(MAXDISTANCE ** 2 + MAXDISTANCE ** 2)
-let NUMPOINTS = 95
+let NUMPOINTS = 130
 const MAXSPEED = 0.4
 const STROKEWEIGHT = 0
 const MAX_REPEL_DIST = 150
 
 let H; let W;
-let time
 
  const clampAlpha = clampBetween(20,255);
 

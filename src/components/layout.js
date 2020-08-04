@@ -45,21 +45,6 @@ const Layout = ({ children}) => {
           height: `45px`,
           overflow: `hidden`,
         }}>
-        <footer style ={{
-          backgroundColor: `rgba(0, 0, 0, .2)`,
-          position: `relative`,
-          width: `100%`,
-          height: `100%`,
-          overflow: `hidden`,
-          
-        }}><span  style={{
-            // paddingLeft: `300px`,
-          }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-           </span>
-        </footer>
         </div>
     </>
   )

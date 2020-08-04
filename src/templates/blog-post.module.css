@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.links {
+    margin: 0;
+}
+
 
 .markdown p, .markdown li {
     font-size: 1.4rem;
@@ -12,9 +16,10 @@
 
 .image {
    height: 75vh;
-    width: 60vw;
-    max-width: 800px;
+    width: 80%;
+    /* max-width: 900px; */
     max-height: 600px;
+    margin-bottom: 3rem;
 }
 
 .markdown {
@@ -30,4 +35,11 @@
     font-size: 1.7rem;
     color: rgb(70, 69, 69);
     font-style: italic;
+}
+
+@media only screen and (max-width: 860px){
+
+    .image {
+        height: 20rem;
+    }
 }

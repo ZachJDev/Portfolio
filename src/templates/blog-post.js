@@ -22,7 +22,7 @@ export default ({ data }) => {
       <Image className={Style.image} fluid={image}></Image>
         <h1>{post.frontmatter.title}</h1>
         {post.frontmatter.type === "blog" && (<h3>{date}</h3>)}
-        {post.frontmatter.type === "work" && (<h3><a href={post.frontmatter.link}> Try it Out</a> or <a href={post.frontmatter.gitHubLink}>Look at the Code</a></h3>)}
+        {post.frontmatter.type === "work" && (<h3 className={Style.links}><a href={post.frontmatter.link}> Try it Out</a> or <a href={post.frontmatter.gitHubLink}>Look at the Code</a></h3>)}
         <div className={Style.markdown} dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
