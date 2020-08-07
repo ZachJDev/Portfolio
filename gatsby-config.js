@@ -9,7 +9,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    { resolve:`gatsby-plugin-sharp`,
+    options: {
+      width: 300,
+      height: 300,
+      resize: 'cover'
+    }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

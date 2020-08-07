@@ -42,7 +42,7 @@ query {
            description
            thumbnail {
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 300, maxHeight: 200, fit: CONTAIN, background: "rgba(0,0,0,0)") {
                 ...GatsbyImageSharpFluid
               }
             }

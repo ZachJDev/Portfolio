@@ -42,7 +42,7 @@ export const query = graphql`
         link
         thumbnail {
             childImageSharp {
-              fluid(maxWidth: 1200) {
+              fluid(maxWidth: 960, maxHeight: 800, fit: CONTAIN, background: "rgba(0,0,0,0)") {
                 ...GatsbyImageSharpFluid
               }
             }
