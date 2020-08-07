@@ -5,9 +5,9 @@ type: blog
 thumbnail: "sketch.png"
 ---
 
-When I was writing the code that powers my portfolio's background, I ran into a few bugs and implementation issues that kept the animation from running optimally. I wanted to write up a short post about how I discovered and resolved those issues. Before I get into that, a word about the technology and how I use it:
+When I was writing the code that powers my portfolio's background, I ran into an interesting implementation issues that kept the animation from running optimally. I wanted to write up a short post about how I discovered and resolved it. But before I get into that, a word about the technology I used:
 
-## p5.js...
+## p5.js
 
 The library powering the animation is the amazing [p5.js](https://p5js.org/). This library is an extension/JS implementation of [Processing](https://processing.org/), a language structured around the visual arts. 
 
