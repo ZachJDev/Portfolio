@@ -5,7 +5,7 @@ import style from "./header.module.css"
 import "typeface-cooper-hewitt"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
 const Header = ({ siteTitle }) => (
@@ -23,6 +23,7 @@ const Header = ({ siteTitle }) => (
       <li><Link to="/work/">Work</Link></li>
       <li><Link to="/blog/">Blog</Link></li>
       <li><a href="https://github.com/ZachJDev"><FontAwesomeIcon icon={faGithub} className={style.icon}/></a></li>
+      <li><a href="https://www.linkedin.com/in/zachary-j-a658a11b0/"> <FontAwesomeIcon icon={faLinkedin} className={style.icon}/></a></li>
       <li><a href="mailto:ZachJDev2121@gmail.com"> <FontAwesomeIcon icon={faEnvelope} className={style.icon}/></a></li>
 
     </ul>
