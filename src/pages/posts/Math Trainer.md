@@ -1,5 +1,5 @@
 ---
-title: "Number Cruncher: Mental Math"
+title: "Number Crunchers: A Mental Math Workout"
 date: "2020-09-15"
 type: work
 thumbnail: "images/Math-Trainer.png"
