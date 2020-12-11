@@ -3,8 +3,8 @@ title: "Number Crunches: A Mental Math Workout"
 date: "2020-09-15"
 type: work
 thumbnail: "images/Math-Trainer.png"
-gitHubLink: "https://github.com/ZachJDev/Math-Trainer"
-link: "https://zachjdev.github.io/Math-Trainer/"
+gitHubLink: "https://github.com/ZachJDev/Number-Crunches"
+link: "https://zachjdev.github.io/Number-Crunches/"
 description: "Practice mental arithmetic with four different modes."
 ---
 
