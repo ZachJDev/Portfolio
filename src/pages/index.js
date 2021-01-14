@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { Link } from "gatsby"
 import Style from "./index.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,33 +11,42 @@ import Collection from "../components/collection"
 import Card from "../components/card"
 import "typeface-source-sans-pro"
 
-const IndexPage = ({data}) =>
- { 
+const IndexPage = ({data}) => { 
+  const [showBg, setShowBg] = useState(false)
   const lead = data.aboutMe.siteMetadata.aboutMe
+  
+  useEffect(() => {
+    setTimeout(() => {
+      setShowBg(true)
+    }, 300)
+  }, [])
+
    return (
-  <>
- <MySketch className={Style.canvas} />
+     <React.Fragment>
+  <div className={ `${Style.backgroundWrap} ${showBg ? Style.show : Style.hide}`}>
+     <MySketch className={Style.canvas} />
   <Layout>
   <div className={Style.main} >
     <SEO title="Home" />
     <h2 className={Style.about}>{lead}</h2>
     <div className={Style.box}>
     <Collection sectionTitle="Things I've Made:" to="/work">
-    {data.works.edges.map(({node}) => (
-      <Card className={Style.testDiv} data={node}></Card>
+    {data.works.edges.map(({node}, idx) => (
+      <Card key={idx} className={Style.testDiv} data={node}></Card>
     ))}
       <Link className={Style.showMore} to="/work/"><span className={Style.seeMore}><p>see more</p> <FontAwesomeIcon icon={faChevronRight} className={Style.icon}/></span> </Link>
     </Collection>
     <Collection sectionTitle="Things I've Written:">
-    {data.blogs.edges.map(({node}) => (
-      <Card className={Style.testDiv} data={node}></Card>
+    {data.blogs.edges.map(({node}, idx) => (
+      <Card  key={idx} className={Style.testDiv} data={node}></Card>
     ))}
       <Link className={Style.showMore}  to="/blog/"> <span className={Style.seeMore}><p>see more</p> <FontAwesomeIcon icon={faChevronRight} className={Style.icon}/></span></Link>
     </Collection>
     </div>
     </div>
   </Layout>
-  </>
+  </div>
+  </React.Fragment>
 )}
 
 export const query = graphql`
